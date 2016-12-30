@@ -1,0 +1,12 @@
+header.dynamic{
+    display: block;
+    min-width: 960px;
+    width: 100%;
+    height: 210px;
+    background: url("//www.macys.com/web20/assets/img/nav/header-bottom-gradient.png") no-repeat center bottom;
+}
+
+footer.dynamic {
+    background-color: #EBEBEB;
+    width: 100%;
+}

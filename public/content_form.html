@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			
+		</style>
+		<link rel="stylesheet" href="/css/main.css">
+		<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<h1 class="form-header txtcenter"> Retailer Onboarding</h1>
+			<div id="divmsg" class="txtcenter hide" style="color:#FFF;background-color:gray;border:#000;padding:5px;border-radius:5px;"></div>
+			<div class="" style="margin:10px 0 10px 0px">
+				<label class="v-top in-block">Existing Retailer</label>
+				<input id="retailyes" type="radio" value="yes" name="retailer" onclick="retailer(this)" />Yes
+				<input id="retailno" type="radio" value="no" name="retailer" onclick="retailer(this)" checked />No
+			</div>
+			<div class="" style="margin:10px 0 10px 0px;">
+			<label for="rName" class="v-top in-block">Retailer Name</label>
+				<div id="ryes" class="v-top in-block w33">
+					
+					<input type="text" id="rName" style="width:47%;" />
+				</div>
+				<div id="rno" class="hide v-top in-block w33">
+					<select name="retname" onchange="getRetailerData(this)" class="" style="width:47%;">
+					<option value="default">Please select</option>
+					</select>
+				</div>
+			</div>
+			<div class="">
+				<label class="v-top in-block">Header Asset:</label><textarea style="display:none;" id="header-html" rows="4" cols="50" placeholder="header"></textarea>
+				<input type="text" id="tb1"/>
+				<button class="v-top" onclick="document.getElementById('fileID').click(); return false;" />Browse</button>
+				<input type="file" id="fileID" style="visibility: hidden;" accept='text/plain' onchange='openFile(event,"#header-html","#tb1","#fileID")' />
+			</div>
+			<div class="">
+				<label class="v-top in-block">Footer Asset:</label><textarea style="display:none;" id="footer-html" rows="4" cols="50" placeholder="footer"></textarea>
+				<input type="text" id="tb2"/>
+				<button class="v-top" onclick="document.getElementById('fileID1').click(); return false;" />Browse</button>
+				<input type="file" id="fileID1" style="visibility: hidden;" accept='text/plain' onchange='openFile(event,"#footer-html","#tb2","#fileID1")'>
+			</div>
+			<div class="">
+				<label class="v-top in-block">Promotions Asset:</label><textarea style="display:none;" id="promo-html" rows="4" cols="50" placeholder="Promo"></textarea>
+				<input type="text" id="tb3"/>
+				<button class="v-top" onclick="document.getElementById('fileID2').click(); return false;" />Browse</button>
+				<input type="file" id="fileID2" style="visibility: hidden;" accept='text/plain' onchange='openFile(event,"#promo-html","#tb3","#fileID2")'>
+			</div>
+			<div class="">
+				<label class="v-top in-block">Style Sheet:</label><textarea style="display:none;" id="page-css" rows="4" cols="50" placeholder="css"></textarea>
+				<input type="text" id="tb4"/>
+				<button class="v-top" onclick="document.getElementById('fileID3').click(); return false;" />Browse</button>
+				<input type="file" id="fileID3" style="visibility: hidden;" accept='text/plain' onchange='openFile(event,"#page-css","#tb4","#fileID3")'>
+			</div>
+			<div class="txtcenter"><button onclick="preview();">Preview</button>
+			<button onclick="ret_save();">Save</button>
+			</div>
+		</div>
+		<script src="/js/main.js"></script>
+	</body>
+</html>
